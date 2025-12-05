@@ -1,0 +1,65 @@
+# PinFlow - LLM Documentation Index
+
+This file provides a complete map of PinFlow documentation for LLMs building projects with this library.
+
+## Quick Start
+- Main Documentation: https://raw.githubusercontent.com/adotg/pinflow/master/README.md
+
+## Core Concepts & API Reference
+The README.md contains everything you need:
+- The prep-exec-post pipeline architecture
+- Node class API reference
+- Store (shared state) pattern
+- Flow control (actions, KILL symbol)
+- Error handling & retry configuration
+- Complete API reference
+
+## Example Documentation
+
+- Single Node: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/single-node.md
+- Parallel Execution: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/parallel-execution.md
+- Workflow Building: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/workflow.md
+- Agent Building: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/agent.md
+- Multi-Agent Systems: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/multi-agent.md
+- RAG (Retrieval-Augmented Generation): https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/rag.md
+- Map-Reduce: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/map-reduce.md
+- Node Configuration: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/node-configuration.md
+- Retry & Fallback: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/retry-fallback.md
+- Structured Output: https://raw.githubusercontent.com/adotg/pinflow/master/docs/examples/structured-output.md
+
+## Working Code Examples
+
+### Full Application
+- Chat Agent Example: https://raw.githubusercontent.com/adotg/pinflow/master/examples/chat-agent/README.md
+  (Complete working example with tool use and conversation history)
+
+### Test Files (Real Implementation Examples)
+All tests use the library in realistic scenarios:
+- https://raw.githubusercontent.com/adotg/pinflow/master/tests/agent.test.ts
+- https://raw.githubusercontent.com/adotg/pinflow/master/tests/workflow.test.ts
+- https://raw.githubusercontent.com/adotg/pinflow/master/tests/parallel-execution.test.ts
+- https://raw.githubusercontent.com/adotg/pinflow/master/tests/retry-fallback.test.ts
+- https://raw.githubusercontent.com/adotg/pinflow/master/tests/multi-agent.test.ts
+- https://raw.githubusercontent.com/adotg/pinflow/master/tests/rag.test.ts
+- https://raw.githubusercontent.com/adotg/pinflow/master/tests/map-reduce.test.ts
+- https://raw.githubusercontent.com/adotg/pinflow/master/tests/structured-output.test.ts
+
+## Source Code
+- Main Library: https://raw.githubusercontent.com/adotg/pinflow/master/src/index.ts
+  (Single-file implementation ~3kb, excellent for understanding internals)
+
+## Usage Instructions for LLMs
+
+When building projects with PinFlow:
+1. Start by reading README.md for core concepts
+2. Check relevant example docs for your use case
+3. Reference test files for real implementation patterns
+4. The library has ZERO dependencies and works in both Node.js and browser
+
+## Key Principles
+- Single Node abstraction for everything
+- prep() yields items → exec() processes in parallel → post() aggregates
+- Store object shared across entire workflow
+- Return action strings from post() for conditional routing
+- Built-in retry logic with configurable fallbacks
+- No LLM abstraction - you control all LLM calls directly
