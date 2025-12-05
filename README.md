@@ -3,12 +3,12 @@
 A barebones (~3kb) TypeScript framework for building LLM agents and workflows. Works in both browser and Node.js.
 
 **Key Features:**
-- 🎯 **Single abstraction**: One `Node` class handles everything
-- ⚡ **Parallel execution**: Built-in concurrent processing via generators
-- 🔄 **Automatic retries**: Configurable retry logic with fallback handlers
-- 🌊 **Streaming support**: Process items as they're generated
-- 🌐 **Universal runtime**: Browser + Node.js compatible
-- 📦 **Tiny footprint**: ~3kb with zero dependencies
+- **Single abstraction**: One `Node` class handles everything
+- **Parallel execution**: Built-in concurrent processing via generators
+- **Automatic retries**: Configurable retry logic with fallback handlers
+- **Streaming support**: Process items as they're generated
+- **Universal runtime**: Browser + Node.js compatible
+- **Tiny footprint**: ~3kb with zero dependencies
 
 Heavily inspired by [PocketFlow](https://github.com/The-Pocket/PocketFlow), but simpler and lighter thanks to JavaScript's async generators.
 
@@ -644,9 +644,3 @@ PinFlow brings PocketFlow's elegant design to TypeScript with some key simplific
 - All nodes are async by default
 - No separate batch/async node classes - just yield multiple values
 - Works in the browser out of the box
-
----
-
-## License
-
-MIT
